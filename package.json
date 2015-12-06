@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "dependencies": {
+    "framework7": "^1.3.5",
+    "riot": "^2.3.11"
+  },
+  "devDependencies": {
+    "light-server": "^1.1.2"
+  },
+  "scripts": {
+    "dev": "light-server -s . -w '**'"
+  }
+}
