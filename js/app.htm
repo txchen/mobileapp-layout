@@ -30,4 +30,13 @@
       </a>
     </div>
   </div>
+
+  <script>
+  this.on('mount', function() {
+    console.log('App mounted')
+    setTimeout(function () {
+      console.log('something loaded')
+    }, 2000)
+  })
+  </script>
 </app>
