@@ -2,16 +2,16 @@
   <div class="tabs-animated-wrap">
     <div class="tabs">
       <div id="tab1" class="page-content tab active">
-        <compa></compa>
+        <compa content1={ appData.content1 }></compa>
       </div>
       <div id="tab2" class="page-content tab">
         <div class="content-block">
-          <compb></compb>
+          <compb content2={ appData.content2 }></compb>
         </div>
       </div>
       <div id="tab3" class="page-content tab">
         <div class="content-block">
-          <compc></compc>
+          <compc content3={ appData.content3 }></compc>
         </div>
       </div>
     </div>
@@ -32,10 +32,20 @@
   </div>
 
   <script>
+  var self = this
+  this.appData = {
+    content1: 'old-content1',
+    content2: 'old-content2'
+  }
+
   this.on('mount', function() {
     console.log('App mounted')
     setTimeout(function () {
+      self.appData.content1 = 'new-content1'
+      self.appData.content2 = 'new-content2'
+      self.appData.content3 = 'new-content3'
       console.log('something loaded')
+      self.update()
     }, 2000)
   })
   </script>
